@@ -100,5 +100,9 @@ def r3():
                 ans = round(math.degrees(math.asin(A/C)))
             else:
                 ans = round(math.degrees(math.acos(A/C)))
+    if (userAns == ans):
+        print("You are correct!")
+    else:
+        print("You are wrong! The correct answer is "+str(ans))
     return userAns == ans
 print(r3())
