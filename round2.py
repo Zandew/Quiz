@@ -198,8 +198,8 @@ def round2():
     else:
         print("f(x) =", str(a) + "x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x", ("+" if c>=0 else "-"), str(abs(c)))
 
-    # User enters what they believe to be the two roots (seperated by a comma) of the quadratic equation that is given
-    ans1, ans2 = map(int, input("Enter the roots seperated by a comma: ").split(","))
+    # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given
+    ans1, ans2 = map(int, input("Enter the 2 roots separated by a comma: ").split(","))
 
     # Determining whether the two roots the user enters are correct
     if ans1 == rt1 and ans2 == rt2:
@@ -243,8 +243,8 @@ def round2():
         
         print()
 
-        # Outputs the correct roots to the user if they got at least 1 root wrong
-        print("The correct roots are:", str(int(round(rt1))) + "," + str(int(round(rt2))))
+        # Outputs the 2 correct roots to the user if they got at least 1 root wrong
+        print("The 2 correct roots are:", str(int(round(rt1))) + "," + str(int(round(rt2))))
 
         # Used to determine the score of the user
         return False
@@ -253,3 +253,4 @@ def round2():
 for i in range(5):
     round2()
     print()
+
