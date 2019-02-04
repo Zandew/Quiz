@@ -1,4 +1,4 @@
-import random
+import random, rules
 
 def r1():
         
@@ -14,9 +14,9 @@ def r1():
         
         while type(answer) is not int:
             if answer == "R" or answer == "r":
-                rule()
+                rules.rule()
             elif answer == "S" or answer == "s":
-                score()
+                rules.score()
             else:
                 print("Your input is invaild! Please try again.")
             print(x,"/",y,"= ?")
