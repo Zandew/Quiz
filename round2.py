@@ -27,7 +27,7 @@ Return:    True if user answer correctly, False otherwise
 '''
 
 # Round #2 function
-def round2():
+def r2():
     # Discriminant is originally defined as 0 (explained in next comment)
     d = 0
 
