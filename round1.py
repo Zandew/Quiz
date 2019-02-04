@@ -18,7 +18,7 @@ def r1(cor, tot):
             elif answer == "S" or answer == "s":
                 print("Your current score is "+str(cor)+" out of "+str(tot))
             else:
-                print("Your input is invaild! Please try again.")
+                print("Your input is invalid! Please try again.")
             print(x,"/",y,"= ?")
             answer = input()
         if answer == str(int(x/y)):

@@ -10,7 +10,7 @@ Purpose:        Create a function which prompts the user to enter the roots of a
 '''
 
 # Modules are imported in order to invoke functions from the module
-import random, math
+import random, math, rules
 
 '''
 Parameter: Not applicable for this function (no parameters)
@@ -27,7 +27,7 @@ Return:    True if user answer correctly, False otherwise
 '''
 
 # Round #2 function
-def r2():
+def r2(cor, tot):
     # Discriminant is originally defined as 0 (explained in next comment)
     d = 0
 
@@ -116,9 +116,23 @@ def r2():
     print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
     print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
 
-    # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given (this is not a multiple choice quiz)
-    ans1, ans2 = map(int, input("Enter the 2 roots separated by a comma: ").split(","))
+    # User enters what they believe to be the two roots (separated by a space) of the quadratic equation that is given (this is not a multiple choice quiz)
+    string = input("Enter the 2 roots separated by a space: ")
+    while (string.count(" ") != 1 or (string.count(" ") == 1 and (not string.split(" ")[0].isdigit() or not string.split(" ")[1].isdigit()))):
+        if (string == "R" or string == "r"):
+            rules.rules()
+        elif (string == "S" or string == "s"):
+            print("Your current score is "+str(cor)+" out of "+str(tot))
+        else:
+            print("Your input is invalid! Please try again.")
+        print("f(x) = ", end="")
+        print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
+        print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
+        print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
+        string = input("Enter the 2 roots separated by a space: ")
 
+    ans1, ans2 = map(int, string.split(" "))
+    
     # Determining whether the two roots the user enters are correct
     # If the user enters both the correct rooots
     if ans1 == rt1 and ans2 == rt2:
@@ -154,3 +168,4 @@ def r2():
         
         # Used to determine the score of the user
         return False
+r2(69, 420)
