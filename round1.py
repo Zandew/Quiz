@@ -1,6 +1,6 @@
 import random, rules
 
-def r1():
+def r1(cor, tot):
         
     x,y = random.randint(1,100),random.randint(1,20)
     md = random.randint(0,1) #   0: multiply   1: divide
@@ -14,9 +14,9 @@ def r1():
         
         while type(answer) is not int:
             if answer == "R" or answer == "r":
-                rules.rule()
+                rules.rules()
             elif answer == "S" or answer == "s":
-                rules.score()
+                print("Your current score is "+str(cor)+" out of "+str(tot))
             else:
                 print("Your input is invaild! Please try again.")
             print(x,"/",y,"= ?")
