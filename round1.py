@@ -1,4 +1,7 @@
 import random
+import main
+def score():
+    print("hi")
 
 def round1():
         
@@ -11,7 +14,18 @@ def round1():
         print(x,"/",y,"= ?")
         
         answer = input()
+        
+        while type(answer) is not int:
+            if answer == "R" or answer == "r":
+                rule()
+            elif answer == "S" or answer == "s":
+                score()
+            else:
+                print("Your input is invaild! Please try again.")
+            print(x,"/",y,"= ?")
+            answer = input()
         if answer == str(int(x/y)):
+            print("Congratulations! You are correct!")
             return True
         else:
             print("You are wrong! The correct answer is",int(x/y))
@@ -21,6 +35,7 @@ def round1():
         print(x,"x",y,"= ?")
         answer = int(input())
         if answer == x*y:
+            print("Congratulations! You are correct!")
             return True
         else:
             print("You are wrong! The correct answer is",x*y)
