@@ -25,8 +25,7 @@ Purpose:   This function prompts the user to enter the roots
            correctly or not. This function will allow the user
            see an up-to-date score after each question.
            
-Return:    An up-to-date score after each question the user
-           answers.
+Return:    True if user answer correctly, False otherwise
 '''
 
 # Round #2 function
@@ -124,76 +123,22 @@ def round2():
 
     # Determining whether the two roots the user enters are correct
     if ans1 == rt1 and ans2 == rt2:
-        
-        print()
-        
+
         # Outputs if the user enters both the 2 correct roots
         print("Congratulations! You are correct!")
-        print(" . . .")
-        print(". o o .")
-        print(". \_/ .")
-        print(" . . .")
-        
+
         # Used to determine the score of the user
-        correct = True
-        return correct
+        return True
     
     elif ans2 == rt1 and ans1 == rt2:
-        
-        print()
-        
+
         # Outputs if the user enters both the 2 correct roots
         print("Congratulations! You are correct!")
-        print(" . . .")
-        print(". o o .")
-        print(". \_/ .")
-        print(" . . .")
-        
         # Used to determine the score of the user
-        correct = True
-        return correct
+        return True
     
     else:
-        
-        print()
-        
-        # Outputs if the user enters at least 1 root that is incorrect
-        print("You are incorrect!")
-        print(" . . .")
-        print(". 0 0 .")
-        print(". --- .")
-        print(" . . .")
-        
-        print()
-
         # Outputs the 2 correct roots to the user if they got at least 1 root incorrect
         print("The 2 correct roots are:", str(int(round(rt1))) + "," + str(int(round(rt2))))
-
         # Used to determine the score of the user
-        correct = False
-        return correct
-
-# Number of questions correct originally
-numOfCorrect = 0
-
-# Number of questions that the user has answered
-numOfQuestion = 0
-
-# Invoking the function for Round #2 of Math Quiz 5 times because there are 5 questions to Round #2
-for i in range(5):
-
-    # If the user enters both the 2 correct roots
-    if round2() == True:
-        numOfCorrect += 1
-        numOfQuestion += 1
-
-    # If the user enters at least one incorrect root
-    else:
-        numOfQuestion += 1
-        
-    print()
-
-    # Outputing the score to the user after each round
-    print("Score:", str(numOfCorrect) + "/" + str(numOfQuestion))
-    
-    print()
+        return False
