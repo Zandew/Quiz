@@ -6,7 +6,7 @@ Purpose:        Create a function which prompts the user to enter the roots of a
                 randomly generated quadratic equation for Round 2 of the Math Quiz.
                 All randomly generated quadratic equations will have 2 distinct real
                 integer roots. Thus, no randomly generated quadratic equations will
-                have no roots, only 1 root, nor any non-integer roots.
+                have no roots, only 1 distinct root, nor any non-integer roots.
 '''
 
 # Modules are imported in order to invoke functions from the module
@@ -35,9 +35,9 @@ def round2():
     The discriminant of a quadratic equation cannot be less than 0
     (if discriminant is than 0 there are no real roots); in this
     function the discriminant cannot be equal to 0 (if the discriminant
-    is 0, there will be only be one real root); this function only asks
-    the user to enter the roots of quadratic equations with 2 distinct
-    real roots
+    is 0, there will be only be one distinct real root); this function
+    only asks the user to enter the roots of quadratic equations with
+    2 distinct real roots
     '''
     while d <= 0:
         
@@ -79,9 +79,9 @@ def round2():
         The discriminant of a quadratic equation cannot be less than 0
         (if discriminant is than 0 there are no real roots); in this
         function the discriminant cannot be equal to 0 (if the discriminant
-        is 0, there will be only be one real root); this function only asks
-        the user to enter the roots of quadratic equations with 2 distinct
-        real roots
+        is 0, there will be only be one distinct real root); this function
+        only asks the user to enter the roots of quadratic equations with
+        2 distinct real roots
         '''
         while d <= 0:
 
@@ -114,7 +114,7 @@ def round2():
     print("f(x) = ", end="")
     print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
     print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
-    print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>=1 else ""))
+    print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
 
     # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given (this is not a multiple choice quiz)
     ans1, ans2 = map(int, input("Enter the 2 roots separated by a comma: ").split(","))
@@ -138,6 +138,7 @@ def round2():
         
         # Outputs if the user enters both the 2 correct roots
         print("Congratulations! You are correct!")
+        
         # Used to determine the score of the user
         return True
 
