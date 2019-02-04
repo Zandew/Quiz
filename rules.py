@@ -1,8 +1,3 @@
-import main
-
-def rule():
+def rules():
     print("RULES")
-
-def score():
-    print(main.score())
  
