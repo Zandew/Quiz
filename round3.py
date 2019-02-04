@@ -13,7 +13,7 @@ A |    \
       B
 '''
 
-def r3():
+def round3():
     var = ['A', 'B', 'C', 'a', 'b']
     val1 = random.randint(10, 100)
     var1 = var[random.randint(0,2)]
@@ -105,4 +105,4 @@ def r3():
     else:
         print("You are wrong! The correct answer is "+str(ans))
     return userAns == ans
-print(r3())
+print(round3())
