@@ -13,8 +13,7 @@ Purpose:   This function prompts the user to enter the roots
            correctly or not. This function will allow the user
            see an up-to-date score after each question.
            
-Return:    An up-to-date score after each question the user
-           answers.
+Return:    True if user answers correctly, False otherwise
 '''
 
 def round2():
@@ -101,102 +100,10 @@ def round2():
         rt2 = (-b+(math.sqrt(d)))/(2*a)
 
     # Formating the output of the quadratic equation to the user based on the values of coefficients (all cases considered)
-    if a == -1 and b == 1 and c == 1:
-        print("f(x) = -x^2 + x + 1")
-    elif a == -1 and b == 1 and c == 0:
-        print("f(x) = -x^2 + x + 0")
-    elif a == -1 and b == 1 and c == -1:
-        print("f(x) = -x^2 + x - 1")
-    elif a == -1 and b == 0 and c == 1:
-        print("f(x) = -x^2 + 1")
-    elif a == -1 and b == 0 and c == 0:
-        print("f(x) = -x^2")
-    elif a == -1 and b == 0 and c == -1:
-        print("f(x) = -x^2 - 1")
-    elif a == -1 and b == -1 and c == 1:
-        print("f(x) = -x^2 - x + 1")
-    elif a == -1 and b == -1 and c == 0:
-        print("f(x) = -x^2 - x")
-    elif a == -1 and b == -1 and c == -1:
-        print("f(x) = -x^2 - x - 1")
-    elif a == 1 and b == 1 and c == 1:
-        print("f(x) = x^2 + x + 1")
-    elif a == 1 and b == 1 and c == 0:
-        print("f(x) = x^2 + x")
-    elif a == 1 and b == 1 and c == -1:
-        print("f(x) = x^2 + x - 1")
-    elif a == 1 and b == 0 and c == 1:
-        print("f(x) = x^2 + 1")
-    elif a == 1 and b == 0 and c == 0:
-        print("f(x) = x^2")
-    elif a == 1 and b == 0 and c == -1:
-        print("f(x) = x^2 - 1")
-    elif a == 1 and b == -1 and c == 1:
-        print("f(x) = x^2 - x + 1")
-    elif a == 1 and b == -1 and c == 0:
-        print("f(x) = x^2 - x")
-    elif a == 1 and b == -1 and c == -1:
-        print("f(x) = x^2 - x - 1")
-    elif a == -1 and b == 1:
-        print("f(x) = -x^2 + x", ("+" if c>=0 else "-"), str(abs(c)))
-    elif a == -1 and b == 0:
-        print("f(x) = -x^2", ("+" if c>=0 else "-"), str(abs(c)))
-    elif a == -1 and b == -1:
-        print("f(x) = -x^2 - x", ("+" if c>=0 else "-"), str(abs(c)))
-    elif a == -1 and c == 1:
-        print("f(x) = -x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x + 1")
-    elif a == -1 and c == 0:
-        print("f(x) = -x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x + 0")
-    elif a == -1 and c == -1:
-        print("f(x) = -x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x - 1")
-    elif a == 1 and b == 1:
-        print("f(x) = x^2 + x", ("+" if c>=0 else "-"), str(abs(c)))
-    elif a == 1 and b == 0:
-        print("f(x) = x^2", ("+" if c>=0 else "-"), str(abs(c)))
-    elif a == 1 and b == -1:
-        print("f(x) = x^2 - x", ("+" if c>=0 else "-"), str(abs(c)))
-    elif a == 1 and c == 1:
-        print("f(x) = x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x + 1")
-    elif a == 1 and c == 0:
-        print("f(x) = x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x")
-    elif a == 1 and c == -1:
-        print("f(x) = x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x - 1")
-    elif b == 1 and c == 1:
-        print("f(x) =", str(a) + "x^2 + x + 1")
-    elif b == 1 and c == 0:
-        print("f(x) =", str(a) + "x^2 + x")
-    elif b == 1 and c == -1:
-        print("f(x) =", str(a) + "x^2 + x - 1")
-    elif b == 0 and c == 1:
-        print("f(x) =", str(a) + "x^2 + 1")
-    elif b == 0 and c == 0:
-        print("f(x) =", str(a) + "x^2")
-    elif b == 0 and c == -1:
-        print("f(x) =", str(a) + "x^2 - 1")
-    elif b == -1 and c == 1:
-        print("f(x) =", str(a) + "x^2 - x + 1")
-    elif b == -1 and c == 0:
-        print("f(x) =", str(a) + "x^2 - x")
-    elif b == -1 and c == -1:
-        print("f(x) =", str(a) + "x^2 - x - 1")
-    elif c == 1:
-        print("f(x) =", str(a) + "x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x + 1")
-    elif c == 0:
-        print("f(x) =", str(a) + "x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x")
-    elif c == -1:
-        print("f(x) =", str(a) + "x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x - 1")
-    elif b == 1:
-        print("f(x) =", str(a) + "x^2 + x", ("+" if c>=0 else "-"), str(abs(c)))
-    elif b == 0:
-        print("f(x) =", str(a) + "x^2", ("+" if c>=0 else "-"), str(abs(c)))
-    elif b == -1:
-        print("f(x) =", str(a) + "x^2 - 1", ("+" if c>=0 else "-"), str(abs(c)))
-    elif a == 1:
-        print("f(x) = x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x", ("+" if c>=0 else "-"), str(abs(c)))
-    elif a == -1:
-        print("f(x) = -x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x", ("+" if c>=0 else "-"), str(abs(c)))
-    else:
-        print("f(x) =", str(a) + "x^2", ("+" if b>=0 else "-"), str(abs(b)) + "x", ("+" if c>=0 else "-"), str(abs(c)))
+    print("f(x) = ", end="")
+    print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
+    print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
+    print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
 
     # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given
     ans1, ans2 = map(int, input("Enter the 2 roots separated by a comma: ").split(","))
