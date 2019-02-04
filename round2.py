@@ -1,3 +1,15 @@
+'''
+Programmed by:  Albert Chan
+Programmed on:  January 31, 2019
+Programmed for: ICS3U1-04
+
+Purpose:        Create a function which prompts the user to enter the roots of a
+                randomly generated quadratic equation for Round 2 of the Math Quiz.
+                All randomly generated quadratic equations will have 2 distinct real
+                integer roots. Thus, no randomly generated quadratic equations will
+                have no roots, only 1 root, nor any non-integer roots.
+'''
+
 # Modules are imported in order to invoke functions from the module
 import random, math
 
@@ -13,9 +25,11 @@ Purpose:   This function prompts the user to enter the roots
            correctly or not. This function will allow the user
            see an up-to-date score after each question.
            
-Return:    True if user answers correctly, False otherwise
+Return:    An up-to-date score after each question the user
+           answers.
 '''
 
+# Round #2 function
 def round2():
     # Discriminant is originally defined as 0 (explained in next comment)
     d = 0
@@ -105,7 +119,7 @@ def round2():
     print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
     print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
 
-    # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given
+    # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given (this is not a multiple choice quiz)
     ans1, ans2 = map(int, input("Enter the 2 roots separated by a comma: ").split(","))
 
     # Determining whether the two roots the user enters are correct
@@ -121,7 +135,8 @@ def round2():
         print(" . . .")
         
         # Used to determine the score of the user
-        return True
+        correct = True
+        return correct
     
     elif ans2 == rt1 and ans1 == rt2:
         
@@ -135,14 +150,15 @@ def round2():
         print(" . . .")
         
         # Used to determine the score of the user
-        return True
+        correct = True
+        return correct
     
     else:
         
         print()
         
-        # Outputs if the user enters at least 1 root that is wrong
-        print("You are wrong!")
+        # Outputs if the user enters at least 1 root that is incorrect
+        print("You are incorrect!")
         print(" . . .")
         print(". 0 0 .")
         print(". --- .")
@@ -150,14 +166,34 @@ def round2():
         
         print()
 
-        # Outputs the 2 correct roots to the user if they got at least 1 root wrong
+        # Outputs the 2 correct roots to the user if they got at least 1 root incorrect
         print("The 2 correct roots are:", str(int(round(rt1))) + "," + str(int(round(rt2))))
 
         # Used to determine the score of the user
-        return False
+        correct = False
+        return correct
 
-# Invoking the function for Round #2 of Math Quiz
+# Number of questions correct originally
+numOfCorrect = 0
+
+# Number of questions that the user has answered
+numOfQuestion = 0
+
+# Invoking the function for Round #2 of Math Quiz 5 times because there are 5 questions to Round #2
 for i in range(5):
-    round2()
+
+    # If the user enters both the 2 correct roots
+    if round2() == True:
+        numOfCorrect += 1
+        numOfQuestion += 1
+
+    # If the user enters at least one incorrect root
+    else:
+        numOfQuestion += 1
+        
     print()
 
+    # Outputing the score to the user after each round
+    print("Score:", str(numOfCorrect) + "/" + str(numOfQuestion))
+    
+    print()
