@@ -14,6 +14,7 @@ def round1():
         if answer == str(int(x/y)):
             return True
         else:
+            print("You are wrong! The correct answer is",int(x/y))
             return False
     elif md == 0:
         x,y = random.randint(2,20),random.randint(2,20)
@@ -22,5 +23,6 @@ def round1():
         if answer == x*y:
             return True
         else:
+            print("You are wrong! The correct answer is",x*y)
             return False
 
