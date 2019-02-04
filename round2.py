@@ -2,7 +2,6 @@
 Programmed by:  Albert Chan
 Programmed on:  January 31, 2019
 Programmed for: ICS3U1-04
-
 Purpose:        Create a function which prompts the user to enter the roots of a
                 randomly generated quadratic equation for Round 2 of the Math Quiz.
                 All randomly generated quadratic equations will have 2 distinct real
@@ -15,7 +14,6 @@ import random, math
 
 '''
 Parameter: Not applicable for this function (no parameters)
-
 Purpose:   This function prompts the user to enter the roots
            of a randomly quadratic equation (f(x) = ax^2 + bx + c) given,
            after this function is invoked. The random quadratic
@@ -122,23 +120,36 @@ def round2():
     ans1, ans2 = map(int, input("Enter the 2 roots separated by a comma: ").split(","))
 
     # Determining whether the two roots the user enters are correct
+    # If the user enters both the correct rooots
     if ans1 == rt1 and ans2 == rt2:
 
+        print()
+        
         # Outputs if the user enters both the 2 correct roots
         print("Congratulations! You are correct!")
 
         # Used to determine the score of the user
         return True
-    
+
+    # If the user enters both the correct roots
     elif ans2 == rt1 and ans1 == rt2:
 
+        print()
+        
         # Outputs if the user enters both the 2 correct roots
         print("Congratulations! You are correct!")
         # Used to determine the score of the user
         return True
-    
+
+    # If the user enters at least one incorrect root
     else:
-        # Outputs the 2 correct roots to the user if they got at least 1 root incorrect
+
+        print()
+
+        print("You are incorrect!")
+        
+        # Outputs the 2 correct roots
         print("The 2 correct roots are:", str(int(round(rt1))) + "," + str(int(round(rt2))))
+        
         # Used to determine the score of the user
         return False
