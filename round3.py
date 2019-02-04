@@ -13,7 +13,7 @@ A |    \
       B
 '''
 
-def r3():
+def r3(cor, tot):
     var = ['A', 'B', 'C', 'a', 'b']
     val1 = random.randint(10, 100)
     var1 = var[random.randint(0,2)]
@@ -40,7 +40,18 @@ def r3():
         unknown = var[random.randint(3, 4)]
     print("Given: \n"+str(var1)+" = "+str(val1)+" units\n"+str(var2)+" = "+str(val2)+(" degrees" if solveForSide else " units"))
     print("Solve for "+str(unknown))
-    userAns = int(input("Enter your answer rounded to the nearest integer: "))
+    userAns = input("Enter your answer rounded to the nearest integer: ")
+    while not userAns.isdigit():
+        if userAns == "R" or userAns == "r":
+             rules.rules()
+        elif userAns == "S" or userAns == "s":
+            print("Your current score is "+str(cor)+" out of "+str(tot))
+        else:
+            print("Your input is invaild! Please try again.")
+        print("Given: \n"+str(var1)+" = "+str(val1)+" units\n"+str(var2)+" = "+str(val2)+(" degrees" if solveForSide else " units"))
+        print("Solve for "+str(unknown))
+        userAns = input("Enter your answer rounded to the nearest integer: ")
+    userAns = int(userAns)
     ans = None
     if (solveForSide):
         val2 = math.radians(val2)
@@ -105,4 +116,3 @@ def r3():
     else:
         print("You are wrong! The correct answer is "+str(ans))
     return userAns == ans
-print(round3())
