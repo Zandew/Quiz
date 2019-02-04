@@ -13,7 +13,7 @@ A |    \
       B
 '''
 
-def round3():
+def r3():
     var = ['A', 'B', 'C', 'a', 'b']
     val1 = random.randint(10, 100)
     var1 = var[random.randint(0,2)]
