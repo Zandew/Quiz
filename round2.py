@@ -114,7 +114,7 @@ def round2():
     print("f(x) = ", end="")
     print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
     print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
-    print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
+    print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>=1 else ""))
 
     # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given (this is not a multiple choice quiz)
     ans1, ans2 = map(int, input("Enter the 2 roots separated by a comma: ").split(","))
