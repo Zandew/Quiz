@@ -1,9 +1,6 @@
 import random
-import main
-def score():
-    print("hi")
 
-def round1():
+def r1():
         
     x,y = random.randint(1,100),random.randint(1,20)
     md = random.randint(0,1) #   0: multiply   1: divide
