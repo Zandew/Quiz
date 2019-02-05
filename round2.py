@@ -10,7 +10,7 @@ Purpose:        Create a function which prompts the user to enter the roots of a
 '''
 
 # Modules are imported in order to invoke functions from the module
-import random, math, rules
+import random, math#, rules
 
 '''
 Parameter: Not applicable for this function (no parameters)
@@ -28,6 +28,7 @@ Return:    True if user answer correctly, False otherwise
 
 # Round #2 function
 def r2(cor, tot):
+    
     # Discriminant is originally defined as 0 (explained in next comment)
     d = 0
 
@@ -117,24 +118,50 @@ def r2(cor, tot):
     print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
 
     # User enters what they believe to be the two roots (separated by a space) of the quadratic equation that is given (this is not a multiple choice quiz)
-    string = input("Enter the 2 roots separated by a space: ")
-    while (string.count(" ") != 1 or (string.count(" ") == 1 and (not string.split(" ")[0].isdigit() or not string.split(" ")[1].isdigit()))):
+    string = input("Enter the 2 roots separated by a space (Enter 'R' or 'r' to see the rules or enter 'S' or 's' to see your accumulated score): ")
+    
+    # If the string the user enters has 1 space and the length of the string is greater than 1 (used for error checking)
+    if string.count(" ") == 1 and len(string) > 1:
+        stringSplit0 = string.split(" ")[0]
+        stringSplit1 = string.split(" ")[1]
+        splitStrip0 = stringSplit0.strip("-")
+        splitStrip1 = stringSplit1.strip("-")
+    
+    # Checks the input of the user and outputs the corresponding output (error checking and checking the user's input)
+    while (string.count(" ") != 1 or len(string) == 1 or (string.count(" ") == 1 and (not splitStrip0.isdigit() or not splitStrip1.isdigit()))):
+
+        # If the user inputs "R" or "r" the rules of the quiz are outputted to the user
         if (string == "R" or string == "r"):
             rules.rules()
+
+        # If the user inputs "S" or "s" the score of the quiz are outputted to the user
         elif (string == "S" or string == "s"):
-            print("Your current score is "+str(cor)+" out of "+str(tot))
+            print("Your current score is " + str(cor) + " out of " + str(tot) + ".")
+
+        # If the user inputs an invalid response, the user is prompted to enter what he/she thinks the are 2 roots
         else:
             print("Your input is invalid! Please try again.")
+
+        print()
+        
+        # Formating the output of the quadratic equation to the user based on the values of coefficients (all cases considered; coefficients determined previously)
         print("f(x) = ", end="")
         print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
         print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
         print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
-        string = input("Enter the 2 roots separated by a space: ")
+        string = input("Enter the 2 roots separated by a space (Enter 'R' or 'r' to see the rules or enter 'S' or 's' to see your accumulated score): ")
+
+        # If the string the user enters has 1 space and the length of the string is greater than 1 (used for error checking)
+        if string.count(" ") == 1 and len(string) > 1:
+            stringSplit0 = string.split(" ")[0]
+            stringSplit1 = string.split(" ")[1]
+            splitStrip0 = stringSplit0.strip("-")
+            splitStrip1 = stringSplit1.strip("-")
 
     ans1, ans2 = map(int, string.split(" "))
     
     # Determining whether the two roots the user enters are correct
-    # If the user enters both the correct rooots
+    # If the user enters both the correct roots
     if ans1 == rt1 and ans2 == rt2:
 
         print()
@@ -142,6 +169,8 @@ def r2(cor, tot):
         # Outputs if the user enters both the 2 correct roots
         print("Congratulations! You are correct!")
 
+        print()
+        
         # Used to determine the score of the user
         return True
 
@@ -152,6 +181,8 @@ def r2(cor, tot):
         
         # Outputs if the user enters both the 2 correct roots
         print("Congratulations! You are correct!")
+
+        print()
         
         # Used to determine the score of the user
         return True
@@ -161,11 +192,15 @@ def r2(cor, tot):
 
         print()
 
+        # Outputs if the user enters at least one incorrect root
         print("You are incorrect!")
         
         # Outputs the 2 correct roots
-        print("The 2 correct roots are:", str(int(round(rt1))) + "," + str(int(round(rt2))))
+        print("The 2 correct roots are:", str(int(round(rt1))) + " and " + str(int(round(rt2))))
+
+        print()
         
         # Used to determine the score of the user
         return False
+    
 r2(69, 420)
