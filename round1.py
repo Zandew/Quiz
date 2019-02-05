@@ -17,6 +17,7 @@ def r1(cor, tot):
                 rules.rules()
             elif answer == "S" or answer == "s":
                 print("Your current score is "+str(cor)+" out of "+str(tot))
+                print("You are currently on question #"+str(tot%5+1)+" on round #"+str(ceil(tot/5)))
             else:
                 print("Your input is invalid! Please try again.")
             print(x,"/",y,"= ?")
