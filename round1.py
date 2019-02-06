@@ -1,8 +1,8 @@
-import random, rules
+import random, rules, math
 
 def r1(cor, tot):
         
-    x,y = random.randint(1,100),random.randint(1,20)
+    x,y = random.randint(2,100),random.randint(2,20)
     md = random.randint(0,1) #   0: multiply   1: divide
     if md == 1:
         while x % y != 0:
