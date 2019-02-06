@@ -16,17 +16,17 @@ def r1(cor, tot):
             if answer == "R" or answer == "r":
                 rules.rules()
             elif answer == "S" or answer == "s":
-                print("Your current score is "+str(cor)+" out of "+str(tot))
-                print("You are currently on question #"+str(tot%5+1)+" on round #"+str(math.ceil((tot+1)/5)))
+                print("Your current score is",cor,"out of",tot)
+                print("You are currently on question #"+str(tot%5+1),"on round #"+str(math.ceil((tot+1)/5)))
             else:
                 print("Your input is invalid! Please try again.")
             print(x,"/",y,"= ?")
             answer = input()
         if answer == str(int(x/y)):
-            print("Congratulations! You are correct!")
+            print("Congratulations! You are correct!\n")
             return True
         else:
-            print("You are wrong! The correct answer is",int(x/y))
+            print("You are wrong! The correct answer is",int(x/y),"\n")
             return False
     elif md == 0:
         x,y = random.randint(2,20),random.randint(2,20)
@@ -38,8 +38,8 @@ def r1(cor, tot):
             if answer == "R" or answer == "r":
                 rules.rules()
             elif answer == "S" or answer == "s":
-                print("Your current score is "+str(cor)+" out of "+str(tot))
-                print("You are currently on question #"+str(tot%5+1)+" on round #"+str(math.ceil((tot+1)/5)))
+                print("Your current score is",cor,"out of",tot)
+                print("You are currently on question #"+str(tot%5+1),"on round #"+str(math.ceil((tot+1)/5)))
             else:
                 print("Your input is invalid! Please try again.")
             print(x,"x",y,"= ?")
@@ -48,9 +48,9 @@ def r1(cor, tot):
         answer = int(answer)
         
         if answer == x*y:
-            print("Congratulations! You are correct!")
+            print("Congratulations! You are correct!\n")
             return True
         else:
-            print("You are wrong! The correct answer is",x*y)
+            print("You are wrong! The correct answer is",x*y,"\n")
             return False
 
