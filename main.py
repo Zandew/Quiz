@@ -19,13 +19,13 @@ def main():
         questions += 1
     print("ROUND 2 BEGIN")
     for i in range(5):
-        print("ROUND 1 QUESTION "+str(i+1))
+        print("ROUND 2 QUESTION "+str(i+1))
         if (round2.r2(score, questions)):
             score += 1
         questions += 1
     print("ROUND 3 BEGIN")
     for i in range(5):
-        print("ROUND 1 QUESTION "+str(i+1))
+        print("ROUND 3 QUESTION "+str(i+1))
         if (round3.r3(score, questions)):
             score += 1
         questions += 1
