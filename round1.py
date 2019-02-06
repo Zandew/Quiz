@@ -42,9 +42,11 @@ def r1(cor, tot):
                 print("You are currently on question #"+str((tot+1)%5+1)+" on round #"+str(math.ceil((tot+1)/5)))
             else:
                 print("Your input is invalid! Please try again.")
-            print(x,"/",y,"= ?")
+            print(x,"x",y,"= ?")
             answer = input()
                 
+        answer = int(answer)
+        
         if answer == x*y:
             print("Congratulations! You are correct!")
             return True
