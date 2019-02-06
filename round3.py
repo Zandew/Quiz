@@ -1,12 +1,12 @@
 import random, math
 
 def draw():
-    print("  |\ ")
+    print("\n  |\ ")
     print("  |◡\ ")
     print("  |b \ ")
     print("  |   \ C ")
     print("A |    \ ")
-    print("  |     \ \t\tNote: Not drawn to scale")
+    print("  |     \ \tNote: Not drawn to scale")
     print("  |      \ ")
     print("  |_     a\ ")
     print("  |_|_____(\ ")
@@ -62,7 +62,7 @@ def r3(cor, tot):
              rules.rules()
         elif userAns == "S" or userAns == "s":
             print("Your current score is "+str(cor)+" out of "+str(tot))
-            print("You are currently on question #"+str((tot)%5+1)+" on round #"+str(ceil((tot+1)/5)))
+            print("You are currently on question #"+str((tot)%5+1)+" on round #"+str(math.ceil((tot+1)/5)))
         else:
             print("Your input is invaild! Please try again.\n")
         draw()
