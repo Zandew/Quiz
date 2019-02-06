@@ -12,7 +12,7 @@ def r1(cor, tot):
         
         answer = input()
         
-        while type(answer) is not int:
+        while answer.isdigit() == False:
             if answer == "R" or answer == "r":
                 rules.rules()
             elif answer == "S" or answer == "s":
