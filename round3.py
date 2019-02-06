@@ -6,7 +6,7 @@ def draw():
     print("  |b \ ")
     print("  |   \ C ")
     print("A |    \ ")
-    print("  |     \ ")
+    print("  |     \ \t\tNote: Not drawn to scale")
     print("  |      \ ")
     print("  |_     a\ ")
     print("  |_|_____(\ ")
