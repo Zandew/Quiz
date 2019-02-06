@@ -137,7 +137,7 @@ def r2(cor, tot):
         # If the user inputs "S" or "s" the score of the quiz are outputted to the user
         elif (string == "S" or string == "s"):
             print("Your current score is " + str(cor) + " out of " + str(tot) + ".")
-            print("You are currently on question #"+str((tot+1)%5+1)+" on round #"+str(math.ceil((tot+1)/5)))
+            print("You are currently on question #"+str((tot%5)+1)+" on round #"+str(math.ceil((tot+1)/5)))
 
         # If the user inputs an invalid response, the user is prompted to enter what he/she thinks the are 2 roots
         else:
