@@ -10,7 +10,7 @@ Purpose:        Create a function which prompts the user to enter the roots of a
 '''
 
 # Modules are imported in order to invoke functions from the module
-import random, math#, rules
+import random, math, rules
 
 '''
 Parameter: Not applicable for this function (no parameters)
@@ -203,5 +203,3 @@ def r2(cor, tot):
         
         # Used to determine the score of the user
         return False
-    
-r2(69, 420)
