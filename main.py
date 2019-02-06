@@ -9,6 +9,25 @@ def main():
     rules.rules()
     print("ARE YOU READY TO START??(Enter anything to start the game)")
     input()
-    round1.r1()
+    score = 0
+    questions = 0
+    print("ROUND 1 BEGIN")
+    for i in range(5):
+        print("ROUND 1 QUESTION "+str(i+1))
+        questions += 1
+        if (round1.r1()):
+            score += 1
+    print("ROUND 2 BEGIN")
+    for i in range(5):
+        print("ROUND 1 QUESTION "+str(i+1))
+        questions += 1
+        if (round2.r2()):
+            score += 1
+    print("ROUND 3 BEGIN")
+    for i in range(5):
+        print("ROUND 1 QUESTION "+str(i+1))
+        questions += 1
+        if (round3.r3()):
+            score += 1
     
 main()
