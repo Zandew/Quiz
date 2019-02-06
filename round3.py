@@ -1,6 +1,16 @@
 import random, math
 
-
+def draw():
+    print("  |\")
+    print("  |◡\")
+    print("  |b \ ")
+    print("  |   \ C")
+    print("A |    \")
+    print("  |     \")
+    print("  |      \")
+    print("  |_     a\")
+    print("  |_|_____(\")
+    print("      B\n")
 
 def r3(cor, tot):
     
@@ -42,16 +52,7 @@ def r3(cor, tot):
         unknown = var[random.randint(3, 4)]
         
     #formats the given variables and the variable the user has to solve for
-    print("  |\")
-    print("  |◡\")
-    print("  |b \ ")
-    print("  |   \ C")
-    print("A |    \")
-    print("  |     \")
-    print("  |      \")
-    print("  |_     a\")
-    print("  |_|_____(\")
-    print("      B\n")
+    draw()
     print("Given: \n"+str(var1)+" = "+str(val1)+" units\n"+str(var2)+" = "+str(val2)+(" degrees" if solveForSide else " units"))
     print("Solve for "+str(unknown)+"\n")
     userAns = input("Enter your answer rounded to the nearest integer: ")
@@ -64,6 +65,7 @@ def r3(cor, tot):
             print("You are currently on question #"+str((tot)%5+1)+" on round #"+str(ceil((tot+1)/5)))
         else:
             print("Your input is invaild! Please try again.\n")
+        draw()
         print("Given: \n"+str(var1)+" = "+str(val1)+" units\n"+str(var2)+" = "+str(val2)+(" degrees" if solveForSide else " units"))
         print("Solve for "+str(unknown))
         userAns = input("Enter your answer rounded to the nearest integer: ")
