@@ -1,15 +1,15 @@
 import random, math
 
 def draw():
-    print("  |\")
-    print("  |◡\")
+    print("  |\ ")
+    print("  |◡\ ")
     print("  |b \ ")
-    print("  |   \ C")
-    print("A |    \")
-    print("  |     \")
-    print("  |      \")
-    print("  |_     a\")
-    print("  |_|_____(\")
+    print("  |   \ C ")
+    print("A |    \ ")
+    print("  |     \ ")
+    print("  |      \ ")
+    print("  |_     a\ ")
+    print("  |_|_____(\ ")
     print("      B\n")
 
 def r3(cor, tot):
