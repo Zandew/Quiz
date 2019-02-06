@@ -31,7 +31,20 @@ def r1(cor, tot):
     elif md == 0:
         x,y = random.randint(2,20),random.randint(2,20)
         print(x,"x",y,"= ?")
-        answer = int(input())
+        
+        answer = input()
+        
+        while answer.isdigit() == False:
+            if answer == "R" or answer == "r":
+                rules.rules()
+            elif answer == "S" or answer == "s":
+                print("Your current score is "+str(cor)+" out of "+str(tot))
+                print("You are currently on question #"+str(tot%5+1)+" on round #"+str(ceil(tot/5)))
+            else:
+                print("Your input is invalid! Please try again.")
+            print(x,"/",y,"= ?")
+            answer = input()
+                
         if answer == x*y:
             print("Congratulations! You are correct!")
             return True
