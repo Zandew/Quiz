@@ -118,7 +118,7 @@ def r2(cor, tot):
     print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
 
     # User enters what they believe to be the two roots (separated by a space) of the quadratic equation that is given (this is not a multiple choice quiz)
-    string = input("Enter the 2 roots separated by a space (Enter 'R' or 'r' to see the rules or enter 'S' or 's' to see your accumulated score): ")
+    string = input("Enter the 2 roots separated by a space: ")
     
     # If the string the user enters has 1 space and the length of the string is greater than 1 (used for error checking)
     if string.count(" ") == 1 and len(string) > 1:
@@ -150,7 +150,7 @@ def r2(cor, tot):
         print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
         print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
         print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
-        string = input("Enter the 2 roots separated by a space (Enter 'R' or 'r' to see the rules or enter 'S' or 's' to see your accumulated score): ")
+        string = input("Enter the 2 roots separated by a space: ")
 
         # If the string the user enters has 1 space and the length of the string is greater than 1 (used for error checking)
         if string.count(" ") == 1 and len(string) > 1:
