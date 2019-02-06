@@ -1,17 +1,6 @@
 import random, math
 
-'''
-  |\
-  |◡\
-  |b \ 
-  |   \ C
-A |    \
-  |     \
-  |      \
-  |_     a\
-  |_|_____(\
-      B
-'''
+
 
 def r3(cor, tot):
     
@@ -53,8 +42,18 @@ def r3(cor, tot):
         unknown = var[random.randint(3, 4)]
         
     #formats the given variables and the variable the user has to solve for
+    print("  |\")
+    print("  |◡\")
+    print("  |b \ ")
+    print("  |   \ C")
+    print("A |    \")
+    print("  |     \")
+    print("  |      \")
+    print("  |_     a\")
+    print("  |_|_____(\")
+    print("      B\n")
     print("Given: \n"+str(var1)+" = "+str(val1)+" units\n"+str(var2)+" = "+str(val2)+(" degrees" if solveForSide else " units"))
-    print("Solve for "+str(unknown))
+    print("Solve for "+str(unknown)+"\n")
     userAns = input("Enter your answer rounded to the nearest integer: ")
     #keeps asking for input until user enters valid answer
     while not userAns.isdigit():
@@ -64,7 +63,7 @@ def r3(cor, tot):
             print("Your current score is "+str(cor)+" out of "+str(tot))
             print("You are currently on question #"+str((tot)%5+1)+" on round #"+str(ceil((tot+1)/5)))
         else:
-            print("Your input is invaild! Please try again.")
+            print("Your input is invaild! Please try again.\n")
         print("Given: \n"+str(var1)+" = "+str(val1)+" units\n"+str(var2)+" = "+str(val2)+(" degrees" if solveForSide else " units"))
         print("Solve for "+str(unknown))
         userAns = input("Enter your answer rounded to the nearest integer: ")
