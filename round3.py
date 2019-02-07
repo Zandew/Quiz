@@ -1,7 +1,7 @@
 import random, math
 
 def draw():
-    print("\n  |\ ")
+    print("  |\ ")
     print("  |◡\ ")
     print("  |b \ ")
     print("  |   \ C ")
