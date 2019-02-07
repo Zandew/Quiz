@@ -18,7 +18,7 @@ def r3(cor, tot):
     var = ['A', 'B', 'C', 'a', 'b']
     
     #One of the givens have to be a side
-    val1 = random.randint(20, 100)
+    val1 = random.randint(11, 99)
     var1 = var[random.randint(0,2)]
     
     #Decides whether the user has to solve for a side or to solve for an edge
