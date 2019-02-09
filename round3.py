@@ -1,4 +1,4 @@
-import random, math
+import random, math, rules
 
 def draw():
     print("  |\ ")
