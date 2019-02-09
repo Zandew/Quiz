@@ -29,5 +29,7 @@ def main():
         if (round3.r3(score, questions)):
             score += 1
         questions += 1
+        
+    print("\nYour final score is",score,"out of",questions)
     
 main()
