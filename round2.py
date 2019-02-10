@@ -12,23 +12,22 @@ Purpose:        Create a function which prompts the user to enter the roots of a
 # Modules are imported in order to invoke functions from the module
 import random, math, rules
 
-'''
-Parameter: Not applicable for this function (no parameters)
-Purpose:   This function prompts the user to enter the roots
-           of a randomly quadratic equation (f(x) = ax^2 + bx + c) given,
-           after this function is invoked. The random quadratic
-           equations given in this function will always have
-           2 integer roots. After each question the user will
-           be notified whether they answered the question
-           correctly or not. This function will allow the user
-           see an up-to-date score after each question.
-           
-Return:    True if user answer correctly, False otherwise
-'''
-
 # Round #2 function
 def r2(cor, tot):
     
+    '''
+    Parameter: Not applicable for this function (no parameters)
+    Purpose:   This function prompts the user to enter the roots
+               of a randomly quadratic equation (f(x) = ax^2 + bx + c) given,
+               after this function is invoked. The random quadratic
+               equations given in this function will always have
+               2 integer roots. After each question the user will
+               be notified whether they answered the question
+               correctly or not. This function will allow the user
+               see an up-to-date score after each question.
+
+    Return:    True if user answer correctly, False otherwise
+    '''
     # Discriminant is originally defined as 0 (explained in next comment)
     d = 0
 
