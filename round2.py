@@ -15,7 +15,7 @@ import random, math, rules
 '''
 Parameter: The user's current score and the total number of problems asked so far are
            passed as arguments to dynamically display the score whenever the
-           enters "S" or "s". Thus, the user will see their final score at
+           enters "S" or "s". The user will see their final score at
            the end.
 Purpose:   This function prompts the user to enter the roots
            of a randomly quadratic equation (f(x) = ax^2 + bx + c) given,
