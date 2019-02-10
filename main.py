@@ -15,7 +15,7 @@ def main():
     print("There will be 3 rounds in total and 5 questions in each round:")
     print("Round 1:\tMultiply & Divide")
     print("Round 2:\tSolving Quadratic Equations")
-    print("Round 3:\tSolving Right Triangles\n")
+    print("Round 3:\tSolving Right Triangles")
 
     # Outputs the rules to the user
     rules.rules()
