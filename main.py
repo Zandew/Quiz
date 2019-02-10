@@ -5,7 +5,7 @@ def main():
     '''
     Parameter: No parameters
     Purpose:   Starts the Math Quiz
-    Return:    None
+    Return:    No return value (returns None)
     '''
     
     # Greets the user
