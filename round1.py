@@ -2,7 +2,7 @@ import random, rules, math
 
 '''
 Parameter: The user's current score and the total number of problems asked so far are
-           passed as arguments to dynamically display the score whenever the
+           passed as arguments to dynamically display the score whenever the user
            enters "S" or "s". The user will see their final score at
            the end.
 Purpose:   This function prompts the user to find the product of a multiplication
