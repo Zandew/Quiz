@@ -1,15 +1,14 @@
 import random, math, rules
 
-'''
-Parameter: Not applicable for this function (no parameters)
-Purpose:   This function outputs a diagram of a sample triangle
-           to the user.
-Return:    Not applicable for this function (does not return anything);
-           This function only outputs a diagram of a sample triangle to
-           the user.
-'''
-        
 def draw():
+    
+    '''
+    Parameter: Not applicable for this function (no parameters)
+    Purpose:   This function outputs a diagram of a sample triangle
+               to the user.
+    Return:    No return value (returns None)
+    '''
+    
     print("  |\ ")
     print("  |◡\ ")
     print("  |b \ ")
@@ -21,23 +20,23 @@ def draw():
     print("  |_|_____(\ ")
     print("      B\n")
 
-'''
-Parameter: The user's current score and the total number of problems asked so far are
-           passed as arguments to dynamically display the score whenever the
-           enters "S" or "s". The user will see their final score at
-           the end.
-Purpose:   This function prompts the user to solve one other random variable to a given right
-           triangle (a side or an angle). The user will be given two random variables to a right triangle
-           (which can be two side lengths or one side length and one angle). This function determines the
-           ability of the user to do primary trigonometry. After each question the user will be
-           notified whether they answered the question correctly or not. This
-           function will allow the user see an up-to-date score or rules after each
-           question if he/she wants to.
-Return:    This function returns True if user answers correctly, but
-           False otherwise
-'''
-
 def r3(cor, tot):
+
+    '''
+    Parameter: The user's current score and the total number of problems asked so far are
+               passed as arguments to dynamically display the score whenever the
+               enters "S" or "s". The user will see their final score at
+               the end.
+    Purpose:   This function prompts the user to solve one other random variable to a given right
+               triangle (a side or an angle). The user will be given two random variables to a right triangle
+               (which can be two side lengths or one side length and one angle). This function determines the
+               ability of the user to do primary trigonometry. After each question the user will be
+               notified whether they answered the question correctly or not. This
+               function will allow the user see an up-to-date score or rules after each
+               question if he/she wants to.
+    Return:    This function returns True if user answers correctly, but
+               False otherwise
+    '''
     
     # List of possible given variables
     var = ['A', 'B', 'C', 'a', 'b']
