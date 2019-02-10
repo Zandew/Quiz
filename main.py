@@ -20,7 +20,7 @@ def main():
     # Outputs the rules to the user
     rules.rules()
 
-    # Pause the program until user enters anything to start the game
+    # User is prompted to enter anything to start the game
     print("ARE YOU READY TO START?? (Enter anything to start the game)")
     input()
 
