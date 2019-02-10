@@ -141,16 +141,17 @@ def r2(cor, tot):
 
         # If the user inputs "S" or "s" the score of the quiz are outputted to the user
         elif (string == "S" or string == "s"):
-            print("\n","-"*60)
+
+            print("\n" + "-"*60)
             print("Your current score is " + str(cor) + " out of " + str(tot) + ".")
             print("You are currently on question #"+str((tot%5)+1)+" on round #"+str(math.ceil((tot+1)/5)))
             print("-"*60,"\n")
 
         # If the user inputs an invalid response, the user is prompted to enter what he/she thinks the are 2 roots
         else:
+            print()
             print("Your input is invalid! Please try again.")
-
-        print()
+            print()
         
         # Formating the output of the quadratic equation to the user based on the values of coefficients (all cases considered; coefficients determined previously)
         print("f(x) = ", end="")
