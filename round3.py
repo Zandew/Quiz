@@ -1,5 +1,14 @@
 import random, math, rules
 
+'''
+Parameter: Not applicable for this function (no parameters)
+Purpose:   This function outputs a diagram of a sample triangle
+           to the user.
+Return:    Not applicable for this function (does not return anything);
+           This function only outputs a diagram of a sample triangle to
+           the user.
+'''
+        
 def draw():
     print("  |\ ")
     print("  |◡\ ")
@@ -12,37 +21,53 @@ def draw():
     print("  |_|_____(\ ")
     print("      B\n")
 
+'''
+Parameter: The user's current score and the total number of problems asked so far are
+           passed as arguments to dynamically display the score whenever the
+           enters "S" or "s". The user will see their final score at
+           the end.
+Purpose:   This function prompts the user to solve one other random variable to a given right
+           triangle (a side or an angle). The user will be given two variables (which can be
+           two side lengths or one side length and one angle). This function determines the
+           ability of the user to do primary trigonometry. After each question the user will be
+           notified whether they answered the question correctly or not. This
+           function will allow the user see an up-to-date score or rules after each
+           question if he/she wants to.
+Return:    This function returns True if user answers correctly, but
+           False otherwise
+'''
+
 def r3(cor, tot):
     
-    #list of possible given variables
+    # List of possible given variables
     var = ['A', 'B', 'C', 'a', 'b']
     
-    #One of the givens have to be a side
+    # One of the givens have to be a side
     val1 = random.randint(11, 99)
     var1 = var[random.randint(0,2)]
     
-    #Decides whether the user has to solve for a side or to solve for an edge
+    # Decides whether the user has to solve for a side or to solve for an edge
     solveForSide = random.randint(0, 1)==0
     
-    #initialize second given variable, second given value, and unknown to None
+    # Initialize second given variable, second given value, and unknown to None
     val2 = None
     var2 = None
     unknown = None
     if (solveForSide):
-        #If user has to solve for a side, the user is given a side and an angle
+        # If user has to solve for a side, the user is given a side and an angle
         var2 = var[random.randint(3, 4)]
         val2 = random.randint(1, 89)
-        #selects a random side that is not the same as the given side
+        # Selects a random side that is not the same as the given side
         unknown = var[random.randint(0, 2)]
         while (unknown == var1):
             unknown = var[random.randint(0, 2)]
     else:
-        #If user has to solve for an angle, the user is given 2 sides
+        # If user has to solve for an angle, the user is given 2 sides
         var2 = var[random.randint(0, 2)]
-        #selects 2 distinct sides for given variables
+        # Selects 2 distinct sides for given variables
         while (var2 == var1):
             var2 = var[random.randint(0, 2)]
-        #if one of the given sides is the hypotenuse, it must be the longest side
+        # If one of the given sides is the hypotenuse, it must be the longest side
         if (var2 == 'C'):
             val2 = random.randint(val1+1, 100)
         elif (var1 == 'C'):
@@ -51,12 +76,12 @@ def r3(cor, tot):
             val2 = random.randint(10, 100)
         unknown = var[random.randint(3, 4)]
         
-    #formats the given variables and the variable the user has to solve for
+    # Formats the given variables and the variable the user has to solve for
     draw()
     print("Given: \n"+str(var1)+" = "+str(val1)+" units\n"+str(var2)+" = "+str(val2)+(" degrees" if solveForSide else " units"))
     print("Solve for "+str(unknown)+"\n")
     userAns = input("Enter your answer rounded to the nearest integer: ")
-    #keeps asking for input until user enters valid answer
+    # Keeps asking for input until user enters valid answer
     while not userAns.isdigit():
         if userAns == "R" or userAns == "r":
              rules.rules()
@@ -72,7 +97,7 @@ def r3(cor, tot):
     userAns = int(userAns)
     ans = None
     
-    #Solves for the unknown
+    # Solves for the unknown
     if (solveForSide):
         val2 = math.radians(val2)
         if (var1 == 'A'):
@@ -132,7 +157,7 @@ def r3(cor, tot):
             else:
                 ans = round(math.degrees(math.acos(A/C)))
                 
-    #outputs if user is correct or not
+    # Outputs if user is correct or not
     if (userAns == ans):
         print("You are correct!")
     else:
