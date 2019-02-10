@@ -4,12 +4,11 @@ Programmed on:  January 31, 2019
 Programmed for: ICS3U1-04
 Purpose:        Create a function which prompts the user to enter the roots of a
                 randomly generated quadratic equation for Round 2 of the Math Quiz.
-                All randomly generated quadratic equations will have 2 distinct real
-                integer roots. Thus, no randomly generated quadratic equations will
-                have no roots, only 1 distinct root, nor any non-integer roots.
+                All randomly generated quadratic equations in this function will have
+                exactly 2 distinct real integer roots.
 '''
 
-# Modules are imported in order to invoke functions from a module
+# Modules are imported in order to invoke their functions
 import random, math, rules
 
 # Round #2 function
@@ -18,19 +17,16 @@ def r2(cor, tot):
     '''
     Parameter: The user's current score and the total number of problems asked so far are
                passed as arguments to dynamically display the score whenever the
-               enters "S" or "s". The user will see their final score at
-               the end.
-    Purpose:   This function prompts the user to enter the roots
-               of a randomly quadratic equation (f(x) = ax^2 + bx + c) given,
-               after this function is invoked. The random quadratic
-               equations given in this function will always have
+               enters "S" or "s". The user will see their final score at the end.
+    Purpose:   This function prompts the user to enter the roots of a randomly quadratic
+               equation (f(x) = ax^2 + bx + c) given, after this function is invoked.
+               The random quadratic equations given in this function will always have exactly
                2 integer roots. This function determines the ability of the user to
                find the roots of a quadratic equation. After each question the user will be
                notified whether they answered the question correctly or not. This
-               function will allow the user see an up-to-date score or rules after each
-               question if he/she wants to.
-    Return:    This function returns True if user answers correctly, but
-               False otherwise.
+               function will also allow the user see an up-to-date score or rules if he/she
+               wants to.
+    Return:    This function returns True if user answers correctly, but False otherwise.
     '''
     
     # Discriminant is originally defined as 0 (explained in next comment)
@@ -47,7 +43,7 @@ def r2(cor, tot):
     
     while d <= 0:
         
-        # The standard form of quadratic equation is f(x) = ax2 + bx + c
+        # The standard form of quadratic equation is f(x) = ax^2 + bx + c
         
         # Coefficient a is between -100 and 100 and is randomly generated
         a = random.randint(-100,100)
