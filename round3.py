@@ -27,8 +27,8 @@ Parameter: The user's current score and the total number of problems asked so fa
            enters "S" or "s". The user will see their final score at
            the end.
 Purpose:   This function prompts the user to solve one other random variable to a given right
-           triangle (a side or an angle). The user will be given two variables (which can be
-           two side lengths or one side length and one angle). This function determines the
+           triangle (a side or an angle). The user will be given two random variables to a right triangle
+           (which can be two side lengths or one side length and one angle). This function determines the
            ability of the user to do primary trigonometry. After each question the user will be
            notified whether they answered the question correctly or not. This
            function will allow the user see an up-to-date score or rules after each
