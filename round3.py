@@ -161,5 +161,5 @@ def r3(cor, tot):
     if (userAns == ans):
         print("You are correct!")
     else:
-        print("You are wrong! The correct answer is "+str(ans))
+        print("You are wrong! The correct answer is "+str(ans)+".")
     return userAns == ans
