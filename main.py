@@ -1,13 +1,13 @@
 import round1, round2, round3, random, math, rules
 
-'''
-Parameter: No parameters
-Purpose:   Starts the Math Quiz
-Return:    None
-'''
-
 def main():
 
+    '''
+    Parameter: No parameters
+    Purpose:   Starts the Math Quiz
+    Return:    None
+    '''
+    
     # Greets the user
     print("Welcome to the FUN MATH QUIZ!\n")
 
