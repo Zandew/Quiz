@@ -1,3 +1,16 @@
+'''
+Programmed by:  Jason Wei
+Programmed on:  January 31, 2019
+Programmed for: ICS3U1-04
+Purpose:        Create a function which prompts the user once to find the product of a 
+                multiplication equation (x*y) or the quotient of a division equation (x/y). 
+                The two randomly given integers (x and y) are guaranteed to be integers. Thus,
+                the answer must only be an integer. This function determines the ability of the 
+                user to find the answer to a multiplication or division equation. After each question 
+                the user will be notified whether they answered the question correctly or not. This
+                function will allow the user see an up-to-date score or rules after each
+                question if he/she wants to.
+'''
 import random, rules, math
 
 '''
@@ -5,9 +18,9 @@ Parameter: The user's current score and the total number of problems asked so fa
            passed as arguments to dynamically display the score whenever the user
            enters "S" or "s". The user will see their final score at
            the end.
-Purpose:   This function prompts the user to find the product of a multiplication
+Purpose:   This function prompts the user once to find the product of a multiplication
            equation (x*y) or the quotient of a division equation (x/y). The two randomly
-           given integers (x and y) are guaranteed to the integers. Thus, the answer must
+           given integers (x and y) are guaranteed to be integers. Thus, the answer must
            only be an integer. This function determines the ability of the user to find
            the answer to a multiplication or division equation. After each question the
            user will be notified whether they answered the question correctly or not. This
