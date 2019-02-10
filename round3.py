@@ -85,7 +85,7 @@ def r3(cor, tot):
         if userAns == "R" or userAns == "r":
              rules.rules()
         elif userAns == "S" or userAns == "s":
-            print("\n","-"*60)
+            print("\n" + "-"*60)
             print("Your current score is "+str(cor)+" out of "+str(tot))
             print("You are currently on question #"+str((tot)%5+1)+" on round #"+str(math.ceil((tot+1)/5)))
             print("-"*60,"\n")
