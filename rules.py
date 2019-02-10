@@ -1,10 +1,11 @@
-'''
-Parameter: No parameters
-Purpose:   Outputs the rules to the user
-Return:    None
-'''
-
 def rules():
+    
+    '''
+    Parameter: No parameters
+    Purpose:   Outputs the rules to the user
+    Return:    No return value (returns None)
+    '''
+    
     print("\n"+"-"*70)
     print("RULES")
     print("You will be given a point for each question you solved.\n")
