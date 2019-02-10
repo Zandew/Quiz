@@ -121,18 +121,18 @@ def r2(cor, tot):
     print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
     print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
 
-    # User enters what they believe to be the two roots (separated by a space) of the quadratic equation that is given (this is not a multiple choice quiz)
-    string = input("Enter the 2 roots separated by a space: ")
+    # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given (this is not a multiple choice quiz)
+    string = input("Enter the 2 roots separated by a comma: ")
     
-    # If the string the user enters has 1 space and the length of the string is greater than 1 (used for error checking)
-    if string.count(" ") == 1 and len(string) > 1:
-        stringSplit0 = string.split(" ")[0]
-        stringSplit1 = string.split(" ")[1]
+    # If the string the user enters has 1 comma and the length of the string is greater than 1 (used for error checking)
+    if string.count(",") == 1 and len(string) > 1:
+        stringSplit0 = string.split(",")[0]
+        stringSplit1 = string.split(",")[1]
         splitStrip0 = stringSplit0.strip("-")
         splitStrip1 = stringSplit1.strip("-")
     
     # Checks the input of the user and outputs the corresponding output (error checking and checking the user's input)
-    while (string.count(" ") != 1 or len(string) == 1 or (string.count(" ") == 1 and (not splitStrip0.isdigit() or not splitStrip1.isdigit()))):
+    while (string.count(",") != 1 or len(string) == 1 or (string.count(",") == 1 and (not splitStrip0.isdigit() or not splitStrip1.isdigit()))):
 
         # If the user inputs "R" or "r" the rules of the quiz are outputted to the user
         if (string == "R" or string == "r"):
@@ -154,16 +154,18 @@ def r2(cor, tot):
         print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
         print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
         print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
-        string = input("Enter the 2 roots separated by a space: ")
 
-        # If the string the user enters has 1 space and the length of the string is greater than 1 (used for error checking)
-        if string.count(" ") == 1 and len(string) > 1:
-            stringSplit0 = string.split(" ")[0]
-            stringSplit1 = string.split(" ")[1]
+        # User inputs their answer
+        string = input("Enter the 2 roots separated by a comma: ")
+
+        # If the string the user enters has 1 comma and the length of the string is greater than 1 (used for error checking)
+        if string.count(",") == 1 and len(string) > 1:
+            stringSplit0 = string.split(",")[0]
+            stringSplit1 = string.split(",")[1]
             splitStrip0 = stringSplit0.strip("-")
             splitStrip1 = stringSplit1.strip("-")
 
-    ans1, ans2 = map(int, string.split(" "))
+    ans1, ans2 = map(int, string.split(","))
     
     # Determining whether the two roots the user enters are correct
     # If the user enters both the correct roots
@@ -192,13 +194,13 @@ def r2(cor, tot):
         # Used to determine the score of the user
         return True
 
-    # If the user enters at least one incorrect root
+    # If the user enters at least one wrong root
     else:
 
         print()
 
-        # Outputs if the user enters at least one incorrect root
-        print("You are incorrect!")
+        # Outputs if the user enters at least one wrong root
+        print("You are wrong!")
         
         # Outputs the 2 correct roots
         print("The 2 correct roots are:", str(int(round(rt1))) + " and " + str(int(round(rt2))))
