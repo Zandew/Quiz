@@ -46,7 +46,7 @@ def r1(cor, tot):
             if answer == "R" or answer == "r":
                 rules.rules()
             elif answer == "S" or answer == "s":
-                print("\n","-"*60)
+                print("\n" + "-"*60)
                 print("Your current score is",cor,"out of",tot)
                 print("You are currently on question #"+str(tot%5+1),"on round #"+str(math.ceil((tot+1)/5)))
                 print("-"*60,"\n")
@@ -70,7 +70,7 @@ def r1(cor, tot):
             if answer == "R" or answer == "r":
                 rules.rules()
             elif answer == "S" or answer == "s":
-                print("\n","-"*60)
+                print("\n" + "-"*60)
                 print("Your current score is",cor,"out of",tot)
                 print("You are currently on question #"+str(tot%5+1),"on round #"+str(math.ceil((tot+1)/5)))
                 print("-"*60,"\n")
