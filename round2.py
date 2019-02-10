@@ -16,7 +16,9 @@ import random, math, rules
 def r2(cor, tot):
     
     '''
-    Parameter: Not applicable for this function (no parameters)
+    Parameter: The user's current score and the total number of problems asked are
+               passed as arguments to dynamically display the score whenever the
+               enters "S" or "s"
     Purpose:   This function prompts the user to enter the roots
                of a randomly quadratic equation (f(x) = ax^2 + bx + c) given,
                after this function is invoked. The random quadratic
