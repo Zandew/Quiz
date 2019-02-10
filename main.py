@@ -46,6 +46,7 @@ def main():
 
     # Round #2
     print("ROUND 2 BEGIN")
+    
     # 5 questions for Round 2
     for i in range(5):
         
@@ -60,8 +61,9 @@ def main():
         # The number of questions the user answered increases by 1 each time
         questions += 1
 
-    # Round #2
+    # Round #3
     print("ROUND 3 BEGIN")
+    
     # 5 questions for Round 3
     for i in range(5):
         
