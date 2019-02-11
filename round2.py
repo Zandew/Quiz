@@ -140,7 +140,7 @@ def r2(cor, tot):
 
             print("\n" + "-"*60)
             print("Your current score is " + str(cor) + " out of " + str(tot) + ".")
-            print("You are currently on question #"+str((tot%5)+1)+" on round #"+str(math.ceil((tot+1)/5)))
+            print("You are currently on question #"+str((tot%5)+1)+" of round #"+str(math.ceil((tot+1)/5)))
             print("-"*60,"\n")
 
         # If the user inputs an invalid response, the user is prompted to enter what he/she thinks the are 2 roots
