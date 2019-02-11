@@ -55,7 +55,7 @@ def r1(cor, tot):
         print(x,"/",y,"= ?")
         
         # prompts the answer from the user
-        answer = input()
+        answer = input("Enter your answer: ")
         
         # continues to prompt the user until a valid input is entered
         while answer.isdigit() == False:
@@ -75,7 +75,7 @@ def r1(cor, tot):
                 
             # prints out the question and prompts the user again until the input is digits only
             print(x,"/",y,"= ?")
-            answer = input()
+            answer = input("Enter your answer: ")
             
         # if the answer is correct
         if answer == str(int(x/y)):
@@ -98,7 +98,7 @@ def r1(cor, tot):
         
         # prompts the user for the answer or intruction (r or s)
         # returns True is answer is right, and False otherwise
-        answer = input()
+        answer = input("Enter your answer: ")
         
         while answer.isdigit() == False:
             
@@ -115,7 +115,7 @@ def r1(cor, tot):
                 print("Your input is invalid! Please try again.\n")
                 
             print(x,"x",y,"= ?")
-            answer = input()
+            answer = input("Enter your answer: ")
                         
         if answer == str(int(x*y)):
             print("Congratulations! You are correct!\n")
