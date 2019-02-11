@@ -13,7 +13,7 @@ def rules():
     print("You ONLY get 1 attempt to answer the question correctly!\n")
     print("For each correct answer, you will get 1 point!")
     print("The total number of points possible is 15.\n")
-    print("Follow the instuctions and input your answer on the line right after each question,")
+    print("Follow the instructions and input your answer,")
     print("or input \"s\" to see your current score,")    
     print("or input \"r\" to see the rules again.")
     print("-"*70,"\n")
