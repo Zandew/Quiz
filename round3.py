@@ -162,5 +162,5 @@ def r3(cor, tot):
     if (userAns == ans):
         print("You are correct!")
     else:
-        print("You are wrong! The correct answer is "+str(ans)+(" units" if solveForSide else "degrees")+".")
+        print("You are wrong! The correct answer is "+str(ans)+(" units" if solveForSide else " degrees")+".")
     return userAns == ans
