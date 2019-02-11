@@ -34,7 +34,7 @@ def r3(cor, tot):
                notified whether they answered the question correctly or not. This
                function will allow the user see an up-to-date score or rules after each
                question if he/she wants to.
-    Return:    This function returns True if user answers correctly, but
+    Return:    This function returns True if user answers correctly, and
                False otherwise
     '''
     
