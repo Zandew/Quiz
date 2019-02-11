@@ -41,8 +41,8 @@ def r1(cor, tot):
     # if that number (md) is 1, a division question generates
     if md == 1:
     
-    # randomly generates two integers to divide
-    x,y = random.randint(2,100),random.randint(2,20)
+        # randomly generates two integers to divide
+        x,y = random.randint(2,100),random.randint(2,20)
     
         # if the first number is divisible by the second number,
         # and both numbers are positive,
