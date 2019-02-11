@@ -121,15 +121,16 @@ def r2(cor, tot):
     # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given (this is not a multiple choice quiz)
     string = input("Enter the 2 roots separated by a comma: ")
     
-    # If the string the user enters has 1 comma and the length of the string is greater than 1 (used for error checking)
+    # If the string the user enters has 1 comma and the length of the string is greater than 2 (used for error checking)
     if string.count(",") == 1 and len(string) > 2:
         stringSplit0 = string.split(",")[0]
         stringSplit1 = string.split(",")[1]
-        if stringSplit0[0] == '-' and len(stringSplit0)>1:
+
+        # If the string the user enters has a negative sign and the length of the string is greater than 1 (used for error checking)
+        if stringSplit0[0] == '-' and len(stringSplit0) > 1:
             stringSplit0 = stringSplit0[1:]
-        if stringSplit1[0] == '-' and len(stringSplit1)>1:
+        if stringSplit1[0] == '-' and len(stringSplit1) > 1:
             stringSplit1 = stringSplit1[1:]
-    
     
     # Checks the input of the user and outputs the corresponding output (error checking and checking the user's input)
     while (string.count(",") != 1 or len(string) < 3 or (string.count(",") == 1 and not (stringSplit0.isdigit() and stringSplit1.isdigit()))):
@@ -158,16 +159,18 @@ def r2(cor, tot):
         print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
         print(("- " if c<0 else "")+(("+ " if c>0 else "")+str(abs(c)) if abs(c)>1 else ""))
 
-        # User inputs their answer
+        # User enters what they believe to be the two roots (separated by a comma) of the quadratic equation that is given (this is not a multiple choice quiz)
         string = input("Enter the 2 roots separated by a comma: ")
 
-        # If the string the user enters has 1 comma and the length of the string is greater than 1 (used for error checking)
-        if string.count(",") == 1 and len(string) > 1:
+        # If the string the user enters has 1 comma and the length of the string is greater than 2 (used for error checking)
+        if string.count(",") == 1 and len(string) > 2:
             stringSplit0 = string.split(",")[0]
             stringSplit1 = string.split(",")[1]
-            if stringSplit0[0] == '-' and len(stringSplit0)>1:
+
+            # If the string the user enters has a negative sign and the length of the string is greater than 1 (used for error checking)
+            if stringSplit0[0] == '-' and len(stringSplit0) > 1:
                 stringSplit0 = stringSplit0[1:]
-            if stringSplit1[0] == '-' and len(stringSplit1)>1:
+            if stringSplit1[0] == '-' and len(stringSplit1) > 1:
                 stringSplit1 = stringSplit1[1:]
 
     ans1, ans2 = map(int, string.split(","))
