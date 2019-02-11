@@ -29,7 +29,7 @@ def main():
     questions = 0
 
     # Round #1
-    print("ROUND 1 BEGIN")
+    print("ROUND 1 BEGIN\n")
     
     # 5 questions for Round 1
     for i in range(5):
@@ -45,7 +45,7 @@ def main():
         questions += 1
 
     # Round #2
-    print("ROUND 2 BEGIN")
+    print("ROUND 2 BEGIN\n")
     
     # 5 questions for Round 2
     for i in range(5):
@@ -62,7 +62,7 @@ def main():
         questions += 1
 
     # Round #3
-    print("ROUND 3 BEGIN")
+    print("ROUND 3 BEGIN\n")
     
     # 5 questions for Round 3
     for i in range(5):
