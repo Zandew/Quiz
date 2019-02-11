@@ -122,17 +122,17 @@ def r2(cor, tot):
     string = input("Enter the 2 roots separated by a comma: ")
     
     # If the string the user enters has 1 comma and the length of the string is greater than 1 (used for error checking)
-    if string.count(",") == 1 and len(string) > 1:
+    if string.count(",") == 1 and len(string) > 2:
         stringSplit0 = string.split(",")[0]
         stringSplit1 = string.split(",")[1]
         if stringSplit0[0] == '-' and len(stringSplit0)>1:
-            splitStrip0 = stringSplit0[1:]
+            stringSplit0 = stringSplit0[1:]
         if stringSplit1[0] == '-' and len(stringSplit1)>1:
-            splitStrip1 = stringSplit1[1:]
+            stringSplit1 = stringSplit1[1:]
     
     
     # Checks the input of the user and outputs the corresponding output (error checking and checking the user's input)
-    while (string.count(",") != 1 or len(string) == 1 or (string.count(",") == 1 and (not splitStrip0.isdigit() or not splitStrip1.isdigit()))):
+    while (string.count(",") != 1 or len(string) < 3 or (string.count(",") == 1 and not (stringSplit0.isdigit() and stringSplit1.isdigit()))):
 
         # If the user inputs "R" or "r" the rules of the quiz are outputted to the user
         if (string == "R" or string == "r"):
