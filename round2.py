@@ -166,9 +166,9 @@ def r2(cor, tot):
             stringSplit0 = string.split(",")[0]
             stringSplit1 = string.split(",")[1]
             if stringSplit0[0] == '-' and len(stringSplit0)>1:
-                splitStrip0 = stringSplit0[1:]
+                stringSplit0 = stringSplit0[1:]
             if stringSplit1[0] == '-' and len(stringSplit1)>1:
-                splitStrip1 = stringSplit1[1:]
+                stringSplit1 = stringSplit1[1:]
 
     ans1, ans2 = map(int, string.split(","))
     
