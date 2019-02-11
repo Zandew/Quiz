@@ -66,7 +66,7 @@ def r1(cor, tot):
             elif answer == "S" or answer == "s":
                 print("\n" + "-"*60)
                 print("Your current score is",cor,"out of",tot)
-                print("You are currently on question #"+str(tot%5+1),"on round #"+str(math.ceil((tot+1)/5)))
+                print("You are currently on question #"+str(tot%5+1),"of round #"+str(math.ceil((tot+1)/5)))
                 print("-"*60,"\n")
                 
             # if the input is not digits only, "r", or "s"
@@ -108,7 +108,7 @@ def r1(cor, tot):
             elif answer == "S" or answer == "s":
                 print("\n" + "-"*60)
                 print("Your current score is",cor,"out of",tot)
-                print("You are currently on question #"+str(tot%5+1),"on round #"+str(math.ceil((tot+1)/5)))
+                print("You are currently on question #"+str(tot%5+1),"of round #"+str(math.ceil((tot+1)/5)))
                 print("-"*60,"\n")
                 
             else:
