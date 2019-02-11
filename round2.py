@@ -26,7 +26,7 @@ def r2(cor, tot):
                notified whether they answered the question correctly or not. This
                function will also allow the user see an up-to-date score or rules if he/she
                wants to.
-    Return:    This function returns True if user answers correctly, but False otherwise.
+    Return:    This function returns True if user answers correctly, and False otherwise.
     '''
     
     # Discriminant is originally defined as 0 (explained in next comment)
