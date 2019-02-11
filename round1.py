@@ -71,7 +71,7 @@ def r1(cor, tot):
                 
             # if the input is not digits only, "r", or "s"
             else:
-                print("Your input is invalid! Please try again.")
+                print("Your input is invalid! Please try again.\n")
                 
             # prints out the question and prompts the user again until the input is digits only
             print(x,"/",y,"= ?")
@@ -112,7 +112,7 @@ def r1(cor, tot):
                 print("-"*60,"\n")
                 
             else:
-                print("Your input is invalid! Please try again.")
+                print("Your input is invalid! Please try again.\n")
                 
             print(x,"x",y,"= ?")
             answer = input()
