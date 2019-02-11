@@ -38,7 +38,7 @@ def r2(cor, tot):
     function the discriminant cannot be equal to 0 (if the discriminant
     is 0, there will be only be one distinct real root); this function
     only asks the user to enter the roots of quadratic equations with
-    2 distinct real roots
+    exactly 2 distinct real roots
     '''
     
     while d <= 0:
@@ -83,7 +83,7 @@ def r2(cor, tot):
         function the discriminant cannot be equal to 0 (if the discriminant
         is 0, there will be only be one distinct real root); this function
         only asks the user to enter the roots of quadratic equations with
-        2 distinct real roots
+        exactly 2 distinct real roots
         '''
         while d <= 0:
 
