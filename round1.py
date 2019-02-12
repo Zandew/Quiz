@@ -14,7 +14,7 @@ Purpose:        Create a function which prompts the user once to find the produc
 # import modules
 import random, rules, math
 
-#defining the function
+# defining the function
 def r1(cor, tot):
 
     '''
@@ -75,14 +75,14 @@ def r1(cor, tot):
                 
             # prints out the question and prompts the user again until the input is digits only
             print(x,"/",y,"= ?")
-            answer = input("Enter your answer: ")
+            answer = input("Enter your answer: ") # answer is type str
             
         # if the answer is correct
         if answer == str(int(x/y)):
             print("Congratulations! You are correct!\n")
             return True
         
-        # if the answer is wrong
+        # if the answer is wrong, prints out the correct answer
         else:
             print("You are wrong! The correct answer is",str(int(x/y)) + ".","\n")
             return False
@@ -96,7 +96,7 @@ def r1(cor, tot):
         # prints out the question
         print(x,"x",y,"= ?")
         
-        # prompts the user for the answer or intruction (r or s)
+        # prompts the user for the answer or the intruction (r or s)
         # returns True is answer is right, and False otherwise
         answer = input("Enter your answer: ")
         
