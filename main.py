@@ -79,6 +79,6 @@ def main():
         questions += 1
 
     # Outputs the final score of the user
-    print("\nYour final score is",score,"out of",questions)
+    print("\nYour final score is",score,"out of", str(questions) + ".")
     
 main()
