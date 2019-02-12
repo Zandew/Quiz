@@ -127,10 +127,10 @@ def r2(cor, tot):
         stringSplit0 = string.split(",")[0]
         stringSplit1 = string.split(",")[1]
 
-        # If the string the user enters has a negative sign and the length of the string is greater than 1 (used for error checking)
-        if stringSplit0[0] == '-' and len(stringSplit0) > 1:
+        # If the string after it is split has a length greater than 1 and has a negative sign (used for error checking)
+        if len(stringSplit0) > 1 and stringSplit0[0] == '-':
             stringSplit0 = stringSplit0[1:]
-        if stringSplit1[0] == '-' and len(stringSplit1) > 1:
+        if  len(stringSplit1) > 1 and stringSplit1[0] == '-':
             stringSplit1 = stringSplit1[1:]
     
     # Checks the input of the user and outputs the corresponding output (error checking and checking the user's input)
@@ -168,10 +168,10 @@ def r2(cor, tot):
             stringSplit0 = string.split(",")[0]
             stringSplit1 = string.split(",")[1]
 
-            # If the string the user enters has a negative sign and the length of the string is greater than 1 (used for error checking)
-            if stringSplit0[0] == '-' and len(stringSplit0) > 1:
+            # If the string after it is split has a length greater than 1 and has a negative sign (used for error checking)
+            if len(stringSplit0) > 1 and stringSplit0[0] == '-':
                 stringSplit0 = stringSplit0[1:]
-            if stringSplit1[0] == '-' and len(stringSplit1) > 1:
+            if  len(stringSplit1) > 1 and stringSplit1[0] == '-':
                 stringSplit1 = stringSplit1[1:]
 
     ans1, ans2 = map(int, string.split(","))
