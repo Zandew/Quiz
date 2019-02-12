@@ -5,7 +5,8 @@ def rules():
     Purpose:   Outputs the rules to the user
     Return:    No return value (returns None)
     '''
-    
+
+    # Output of the rules for our quiz to the user
     print("\n"+"-"*70)
     print("RULES")
     print("You will be given a point for each question you solved.\n")
