@@ -113,7 +113,7 @@ def r2(cor, tot):
         rt1 = (-b-(math.sqrt(d)))/(2*a)
         rt2 = (-b+(math.sqrt(d)))/(2*a)
 
-    # Formating the output of the quadratic equation to the user based on the values of coefficients (all cases considered)
+    # Formatting the output of the quadratic equation to the user based on the values of coefficients (all cases considered)
     print("f(x) = ", end="")
     print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
     print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
@@ -154,7 +154,7 @@ def r2(cor, tot):
             print("Your input is invalid! Please try again.")
             print()
         
-        # Formating the output of the quadratic equation to the user based on the values of coefficients (all cases considered; coefficients determined previously)
+        # Formatting the output of the quadratic equation to the user based on the values of coefficients (all cases considered; coefficients determined previously)
         print("f(x) = ", end="")
         print(("-" if a<0 else "")+(str(abs(a)) if abs(a)>1 else "")+"x^2 ", end="")
         print(("- " if b<0 else "")+(("+ " if b>0 else "")+str(abs(b)) if abs(b)>1 else "")+("x " if b!=0 else ""), end="")
