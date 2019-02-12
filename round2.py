@@ -12,6 +12,7 @@ Purpose:        Create a function which prompts the user to enter the roots of a
 import random, math, rules
 
 # Round #2 function
+# Parameters are used to track the number of questions the user answered correctly and the total number of questions the user has answered
 def r2(cor, tot):
     
     '''
